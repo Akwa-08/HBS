@@ -1,0 +1,334 @@
+.payment-page-wrapper {
+  width: 100%;
+  min-height: 100vh;
+  margin-top: 20px;
+  /* background-color: #219995; */
+  font-family: Arial, sans-serif;
+}
+
+.payment-header {
+  /* background-color: #219995; */
+  color: #019275;
+  padding: 15px 0;
+  padding-bottom: 0;
+  text-align: center;
+}
+
+.payment-header h1 {
+  margin: 0;
+  font-size: 24px;
+  font-weight: 600;
+}
+
+.payment-container {
+  max-width: 1000px;
+  margin: 0 auto;
+  padding: 20px;
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+@media (min-width: 768px) {
+  .payment-container {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+}
+
+.booking-section, .payment-section {
+  background: white;
+  border-radius: 12px;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+  padding: 24px;
+  width: 100%;
+  color: #019275;
+}
+
+.booking-section {
+  flex: 3;
+}
+
+.payment-section {
+  flex: 2;
+}
+
+.booking-section h2, .payment-section h2 {
+  margin-top: 0;
+  margin-bottom: 16px;
+  font-size: 20px;
+  font-weight: 600; 
+}
+
+/* Room Details Styling */
+.room-details {
+  display: flex;
+  gap: 16px;
+  margin-bottom: 20px;
+}
+
+.room-image {
+  flex: 0 0 260px;
+}
+
+.room-image img {
+  height: 100%;
+  min-height: 50px;
+  /* height: 200px; */
+  object-fit: cover;
+  border-radius: 6px;
+}
+
+.room-image img:hover{
+  /* transform: scale(1.02);  */
+  cursor: pointer;
+  /* box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2); */
+  box-shadow: 0 4px 10px rgba(2, 138, 111, 0.6);
+  /* box-shadow: 0 4px 15px rgba(2, 138, 111, 0.6); */
+}
+
+.room-info {
+  flex: 1;
+  margin-right: 5px;
+  margin-left: 5px;
+  color: #006f59;
+}
+
+.room-info h3 {
+  margin: 0 0 6px 0;
+  font-size: 20px;
+  font-weight: 600;
+}
+
+.hotel-location {
+  color: #000;
+  font-size: 14px;
+  /* margin-bottom: 4px; */
+  font-weight: 600;
+}
+
+.room-description {
+  font-size: 14px;
+  color: #555;
+  margin: 5px 0;
+}
+
+/* Booking Dates Styling */
+.booking-dates {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 12px;
+  margin-bottom: 24px;
+  border-bottom: 1px solid #eee;
+  padding-bottom: 20px;
+}
+
+.date-block {
+  flex: 1;
+  min-width: 120px;
+}
+
+.date-label {
+  display: block;
+  font-size: 12px;
+  color: #888;
+  margin-bottom: 4px;
+}
+
+.date-value {
+  display: block;
+  font-size: 14px;
+  font-weight: 500;
+}
+/* Payment Form Styling */
+.payment-form {
+  margin-bottom: 24px;
+  border-bottom: 1px solid #eee;
+  padding-bottom: 20px;
+}
+
+.form-group {
+  margin-bottom: 16px;
+  position: relative;
+}
+
+.form-group label {
+  color: #000;
+  font-size: 16px;
+  font-weight: 500;
+}
+
+.form-group input {
+  width: 100%;
+  padding: 12px;
+  border: 1px solid #ddd;
+  border-radius: 6px;
+  font-size: 14px;
+  transition: border-color 0.2s;
+  margin-top: 2px;
+  color: #000;
+}
+
+.form-group input:focus {
+  border-color: #1a9f96;
+  outline: none;
+}
+
+.card-image {
+  position: absolute;
+  right: 12px;
+  top: 38px;
+  height: 20px;
+  width: auto;
+}
+
+/* Price Summary Styling */
+.price-summary {
+  margin-top: 24px;
+}
+
+.price-rows {
+  margin-bottom: 20px;
+}
+
+.price-row {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 10px;
+  font-size: 14px;
+  color: #555;
+}
+
+.price-total {
+  display: flex;
+  justify-content: space-between;
+  font-weight: 600;
+  padding-top: 10px;
+  border-top: 1px solid #eee;
+  margin-top: 10px;
+  font-size: 16px;
+}
+
+.total-amount {
+  color: #1a9f96;
+}
+
+/* Terms Agreement Styling */
+.terms-agreement {
+  margin: 20px 0;
+}
+
+.checkbox-label {
+  display: flex;
+  align-items: flex-start;
+  font-size: 14px;
+  color: #555;
+}
+
+.checkbox-label input {
+  margin-right: 8px;
+  margin-top: 3px;
+}
+
+.checkbox-label a {
+  color: #1a9f96;
+  text-decoration: none;
+}
+
+.checkbox-label a:hover {
+  text-decoration: underline;
+}
+
+/* Confirm Button Styling */
+.confirm-button {
+  width: 100%;
+  padding: 14px;
+  margin-top: 20px;
+  background-color: #1a9f96;
+  color: white;
+  border: none;
+  border-radius: 6px;
+  font-size: 16px;
+  font-weight: 500;
+  cursor: pointer;
+  transition: background-color 0.2s;
+}
+
+.confirm-button:hover:not(:disabled) {
+  background-color: #158881;
+}
+
+.confirm-button:disabled {
+  background-color: #999;
+  cursor: not-allowed;
+}
+
+.divider {
+  border: none;
+  height: 1px;
+  background-color: #eee;
+  margin: 24px 0;
+}
+
+/* Booking Summary Styling */
+.booking-summary {
+  /* border-top: 1px solid #eee; */
+  /* padding-top: 20px;
+  margin-top: 20px;
+  font-size: 16px;
+  color: #444; */
+  margin: auto;
+}
+
+.summary-item {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 8px;
+}
+
+.summary-label{
+  color: #000;
+  font-size: 16px;
+  font-weight: 500;
+}
+
+.summary-value {
+  font-weight: 500;
+  color: #000;
+}
+
+.summary-label-total{
+  color: #000;
+  font-size: 20px;
+  font-weight: 600;
+}
+
+.summary-value-total{
+  color: #000;
+  font-size: 20px;
+  font-weight: 600;
+}
+
+.summary-total {
+  display: flex;
+  justify-content: space-between;
+  font-weight: 1000;
+  /* border-top: 1px solid #eee; */
+  margin-top: 5px; 
+  padding-top: 10px;
+  color: #03716a;
+  font-size: 20px;
+  margin-bottom: 0;
+}
+
+.error-message {
+  background-color: #fee2e2;
+  border: 1px solid #ef4444;
+  color: #b91c1c;
+  padding: 1rem;
+  margin: 1rem 0;
+  border-radius: 0.5rem;
+  text-align: center;
+  font-weight: 500;
+}
+

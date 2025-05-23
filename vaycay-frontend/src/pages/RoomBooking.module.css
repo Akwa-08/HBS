@@ -1,0 +1,229 @@
+.roombooking-page {
+  padding: 2rem;
+  max-width: 1200px;
+  margin: 0 auto;
+  font-family: 'Poppins', sans-serif;
+  color: #333;
+}
+
+.roombooking-white-container {
+  background-color: #fff;
+  padding: 2rem;
+  border-radius: 1.5rem;
+  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.08);
+}
+
+
+.roombooking-title {
+  font-size: 2.5rem;
+  font-weight: 600;
+  margin-bottom: 0.5rem;
+  color: #222;
+}
+
+.roombooking-location {
+  font-size: 1rem;
+  color: #666;
+  margin-bottom: 0.5rem;
+}
+
+.roombooking-price {
+  font-size: 1.8rem;
+  font-weight: 600;
+  color: #00aa88;
+}
+
+.roombooking-price span {
+  font-size: 1rem;
+  font-weight: 400;
+  margin-left: 6px;
+  color: #444;
+}
+
+.roombooking-description {
+  margin-top: 1rem;
+  color: #555;
+  font-size: 1rem;
+  line-height: 1.5;
+}
+
+.roombooking-thumbnail-wrapper {
+  position: relative;
+  width: 100%;
+  overflow: hidden;
+}
+
+.roombooking-thumbnail-images {
+  display: flex;
+  gap: 1rem;
+  padding: 1rem 0;
+  overflow-x: hidden;
+  scroll-behavior: smooth;
+}
+
+.roombooking-thumbnail-images img {
+  flex: 0 0 auto;
+  width: 350px;
+  height: 250px;
+  object-fit: cover;
+  border-radius: 12px;
+  transition: transform 0.3s;
+}
+
+.roombooking-thumbnail-images img:hover {
+  transform: scale(1.05); 
+  cursor: pointer;
+  box-shadow: 0 4px 15px rgba(1, 100, 80, 0.6);
+}
+
+/* Hover zones for scroll direction */
+.scroll-zone-left,
+.scroll-zone-right {
+  position: absolute;
+  top: 0;
+  width: 50px;
+  height: 100%;
+  z-index: 2;
+}
+
+.scroll-zone-left {
+  left: 0;
+}
+
+.scroll-zone-right {
+  right: 0;
+}
+
+
+.roombooking-content {
+  display: flex;
+  margin-top: 30px;
+  gap: 30px;
+}
+
+.roombooking-roomdetails {
+  flex: 2;
+}
+
+.roombooking-form-container {
+  flex: 1;
+  min-width: 300px;
+}
+
+.roombooking-roomdetails h2 {
+  font-size: 1.2rem;
+  font-weight: bold;
+  margin-bottom: 15px;
+}
+
+.roombooking-form {
+  border: 1px solid #ddd;
+  padding: 20px;
+  border-radius: 10px;
+}
+
+
+.roombooking-form h3 {
+  font-size: 1.2rem;
+  font-weight: bold;
+  margin-bottom: 20px;
+  /* text-align: center; */
+}
+
+.roombooking-form label {
+  display: block;
+  margin-top: 1rem;
+  margin-bottom: 0.4rem;
+  font-weight: 500;
+  color: #444;
+}
+
+.roombooking-form input,
+.roombooking-form .react-datepicker-wrapper {
+  width: 100%;
+  padding: 0.6rem;
+  border: 1px solid #ccc;
+  border-radius: 8px;
+  font-size: 1rem;
+  background-color: #fff;
+  box-sizing: border-box;
+  position: relative;
+  z-index: 1;
+}
+
+.roombooking-form input:focus {
+  outline: none;
+  border-color: #00aa88;
+}
+
+.roombooking-total {
+  margin-top: 1.5rem;
+  font-size: 1.2rem;
+  font-weight: 600;
+  color: #00aa88;
+}
+
+.roombooking-form-button {
+  margin-top: 1.5rem;
+  width: 100%;
+  background-color: #00aa88;
+  color: white;
+  border: none;
+  padding: 0.75rem;
+  border-radius: 10px;
+  font-size: 1rem;
+  font-weight: 600;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.roombooking-form-button:hover {
+  background-color: #008f73;
+}
+
+.roombooking-error-message {
+  color: red;
+  font-size: 1rem;
+  text-align: center;
+  padding: 1rem;
+}
+
+.roombooking-loading-spinner {
+  width: 60px;
+  height: 60px;
+  border: 6px solid #eee;
+  border-top: 6px solid #00aa88;
+  border-radius: 50%;
+  animation: spin 1s linear infinite;
+  margin: 4rem auto;
+}
+
+@keyframes spin {
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+@media (max-width: 768px) {
+  .roombooking-content {
+    flex-direction: column;
+  }
+
+  .roombooking-title {
+    font-size: 2rem;
+  }
+
+  .roombooking-price {
+    font-size: 1.5rem;
+  }
+}
+
+/* Add styles for the date picker calendar */
+:global(.react-datepicker-popper) {
+  z-index: 2 !important;
+}
+
+/* Ensure the image popup has a higher z-index */
+.popup-overlay {
+  z-index: 9999 !important;
+}
